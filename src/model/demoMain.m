@@ -148,9 +148,9 @@ params = BiophysModel(params);  % Run the model with the modified stimulus
 figure; clf;  % Create a new figure and clear any existing plots
 % Plot the original and modified stimuli
 subplot(1, 2, 1);
-plot(params.tme, originalStm, 'LineWidth', 2); hold on;  % Original stimulus plot
-plot(params.tme, results.rawEstimate, 'LineWidth', 2);  % Modified stimulus plot
-ylim([0 meanIntensity*params.timeStep*8]);  
+plot(params.tme, originalStm/params.timeStep, 'LineWidth', 2); hold on;  % Original stimulus plot
+plot(params.tme, results.estimate, 'LineWidth', 2);  % Modified stimulus plot
+% ylim([0 meanIntensity*params.timeStep*8]);  
 legend('original', 'modified');  
 title('Stimuli');  
 xlabel('sec');  
