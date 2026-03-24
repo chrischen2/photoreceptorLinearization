@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photoreceptor-linearization"
+version = "0.1.0"
+description = "Light Adaptation Clamp (LaC) tool for photoreceptor phototransduction modeling"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+]
+
+[tool.setuptools.packages.find]
+include = ["photoreceptor_linearization*"]
+
+[tool.setuptools.package-data]
+photoreceptor_linearization = ["data/**/*.txt"]
